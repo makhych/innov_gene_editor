@@ -1,16 +1,26 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <SequenceViewer :sequence="mySequence"></SequenceViewer>
+
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import SequenceViewer from "./components/SequenceViewer.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+    SequenceViewer
+  },
+  data() {
+      return {
+        mySequence: "ATCGATCGATCG"
+      };
+    }
 }
 </script>
 
